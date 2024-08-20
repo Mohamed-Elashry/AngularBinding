@@ -1,0 +1,17 @@
+<form>
+    <div class="input-group mb-3" style="width: 50%;" >
+        <input type="text" class="form-control"
+         placeholder="Username" aria-label="Username" 
+         aria-describedby="basic-addon1" [(ngModel)]="userName">
+      </div>
+      <div class="input-group mb-3" style="width: 50%;" >
+        <input type="text" class="form-control"disabled value="{{userName}}">
+      </div>
+      <div class="input-group mb-3" style="width: 50%;" >
+        <button 
+                class="btn btn-primary"
+                [disabled]="!userName"
+                (click)="onclickResetUserName()"
+        >Reset User Name</button>
+      </div>
+    </form>
